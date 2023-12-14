@@ -25,7 +25,13 @@
                 <Button x:Name="buttonFtIncrease" Content="Emelés" Width="100" Margin="10" Click="buttonFtIncrease_Click"/>
             </StackPanel>
 
-            <DataGrid x:Name="dataGridMenu"/>
+            <DataGrid x:Name="dataGridMenu" AutoGenerateColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Név" Binding="{Binding Name}"/>
+                    <DataGridTextColumn Header="Kategória" Binding="{Binding Category}"/>
+                    <DataGridTextColumn Header="Ár(Ft)" Binding="{Binding Price}"/>
+                </DataGrid.Columns>
+            </DataGrid>
 
             <Label x:Name="labelForDescription"/>
         </StackPanel>
