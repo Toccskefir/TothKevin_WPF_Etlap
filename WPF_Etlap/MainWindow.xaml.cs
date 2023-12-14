@@ -73,10 +73,20 @@ namespace WPF_Etlap
             double percent = double.Parse(textBoxPercentIncrease.Text.Trim());
             if (selectedFood == null)
             {
-                service.UpdateByPercent(percent);
+                MessageBoxResult result = MessageBox.Show("Biztos emelni szeretné az összes étel árát?",
+                "Emelés", MessageBoxButton.YesNo);
+                if (result == MessageBoxResult.Yes)
+                {
+                    service.UpdateByPercent(percent);
+                }
             } else
             {
-                service.UpdateByPercent(selectedFood.Id, percent, selectedFood);
+                MessageBoxResult result = MessageBox.Show($"Emelni szeretné az alábbi ételt árát: {selectedFood.Name}?",
+                "Törlés", MessageBoxButton.YesNo);
+                if(result == MessageBoxResult.Yes)
+                {
+                    service.UpdateByPercent(selectedFood.Id, percent, selectedFood);
+                }
             }
             textBoxPercentIncrease.Text = "";
             Read();
@@ -94,11 +104,21 @@ namespace WPF_Etlap
             int forint = int.Parse(textBoxFtIncrease.Text.Trim());
             if (selectedFood == null)
             {
-                service.UpdateByForint(forint);
+                MessageBoxResult result = MessageBox.Show("Biztos emelni szeretné az összes étel árát?",
+                "Emelés", MessageBoxButton.YesNo);
+                if (result == MessageBoxResult.Yes)
+                {
+                    service.UpdateByForint(forint);
+                }
             }
             else
             {
-                service.UpdateByForint(selectedFood.Id, forint, selectedFood);
+                MessageBoxResult result = MessageBox.Show($"Emelni szeretné az alábbi ételt árát: {selectedFood.Name}?",
+                "Törlés", MessageBoxButton.YesNo);
+                if (result == MessageBoxResult.Yes)
+                {
+                    service.UpdateByForint(selectedFood.Id, forint, selectedFood);
+                }
             }
             textBoxFtIncrease.Text = "";
             Read();
