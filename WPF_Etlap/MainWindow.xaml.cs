@@ -63,12 +63,45 @@ namespace WPF_Etlap
 
         private void buttonPercentIncrease_Click(object sender, RoutedEventArgs e)
         {
+            if (textBoxPercentIncrease.Text.Trim() == "")
+            {
+                MessageBox.Show("Nem adott meg százalékot!");
+                return;
+            }
 
+            Food selectedFood = dataGridMenu.SelectedItem as Food;
+            double percent = double.Parse(textBoxPercentIncrease.Text.Trim());
+            if (selectedFood == null)
+            {
+                service.UpdateByPercent(percent);
+            } else
+            {
+                service.UpdateByPercent(selectedFood.Id, percent, selectedFood);
+            }
+            textBoxPercentIncrease.Text = "";
+            Read();
         }
 
         private void buttonFtIncrease_Click(object sender, RoutedEventArgs e)
         {
+            if (textBoxFtIncrease.Text.Trim() == "")
+            {
+                MessageBox.Show("Nem adott meg értéket az emeléshez!");
+                return;
+            }
 
+            Food selectedFood = dataGridMenu.SelectedItem as Food;
+            int forint = int.Parse(textBoxFtIncrease.Text.Trim());
+            if (selectedFood == null)
+            {
+                service.UpdateByForint(forint);
+            }
+            else
+            {
+                service.UpdateByForint(selectedFood.Id, forint, selectedFood);
+            }
+            textBoxFtIncrease.Text = "";
+            Read();
         }
     }
 }
