@@ -71,6 +71,12 @@ namespace WPF_Etlap
 
             Food selectedFood = dataGridMenu.SelectedItem as Food;
             double percent = double.Parse(textBoxPercentIncrease.Text.Trim());
+            if (percent < 5 || percent > 50)
+            {
+                MessageBox.Show("A százalékos emelés értéke 5% és 50% között kell legyen!");
+                return;
+            }
+
             if (selectedFood == null)
             {
                 MessageBoxResult result = MessageBox.Show("Biztos emelni szeretné az összes étel árát?",
@@ -102,6 +108,12 @@ namespace WPF_Etlap
 
             Food selectedFood = dataGridMenu.SelectedItem as Food;
             int forint = int.Parse(textBoxFtIncrease.Text.Trim());
+            if (forint < 50 || forint > 3000)
+            {
+                MessageBox.Show("Az emelés értéke 50 és 3000 Ft között kell legyen!");
+                return;
+            }
+
             if (selectedFood == null)
             {
                 MessageBoxResult result = MessageBox.Show("Biztos emelni szeretné az összes étel árát?",
