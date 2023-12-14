@@ -31,7 +31,9 @@ namespace WPF_Etlap
 
         private void buttonAdd_Click(object sender, RoutedEventArgs e)
         {
-
+            FoodForm form = new FoodForm(service);
+            form.Closed += (_, _) => Read();
+            form.ShowDialog();
         }
 
         private void buttonDelete_Click(object sender, RoutedEventArgs e)

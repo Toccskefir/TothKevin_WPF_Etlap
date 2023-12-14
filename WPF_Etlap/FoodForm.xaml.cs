@@ -19,9 +19,16 @@ namespace WPF_Etlap
     /// </summary>
     public partial class FoodForm : Window
     {
-        public FoodForm()
+        private FoodService service;
+        public FoodForm(FoodService foodService)
         {
             InitializeComponent();
+            this.service = foodService;
+        }
+
+        private void buttonAddFood_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
