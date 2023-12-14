@@ -27,7 +27,7 @@
 
             <DataGrid x:Name="dataGridMenu"/>
 
-            <Label x:Name="labelDescription"/>
+            <Label x:Name="labelForDescription"/>
         </StackPanel>
     </Grid>
 </Window>

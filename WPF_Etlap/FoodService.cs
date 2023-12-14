@@ -35,10 +35,10 @@ namespace WPF_Etlap
                 {
                     Food food = new Food();
                     food.Id = reader.GetInt32("id");
-                    food.Name = reader.GetString("name");
-                    food.Description = reader.GetString("description");
-                    food.Price = reader.GetInt32("price");
-                    food.Category = reader.GetString("category");
+                    food.Name = reader.GetString("nev");
+                    food.Description = reader.GetString("leiras");
+                    food.Price = reader.GetInt32("ar");
+                    food.Category = reader.GetString("kategoria");
                     foods.Add(food);
                 }
             }

@@ -16,9 +16,17 @@ namespace WPF_Etlap
     /// </summary>
     public partial class MainWindow : Window
     {
+        private FoodService service;
         public MainWindow()
         {
             InitializeComponent();
+            this.service = new FoodService();
+            Read();
+        }
+
+        private void Read()
+        {
+            dataGridMenu.ItemsSource = service.GetAll();
         }
 
         private void buttonAdd_Click(object sender, RoutedEventArgs e)
