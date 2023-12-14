@@ -20,5 +20,25 @@ namespace WPF_Etlap
         {
             InitializeComponent();
         }
+
+        private void buttonAdd_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void buttonDelete_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void buttonPercentIncrease_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void buttonFtIncrease_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

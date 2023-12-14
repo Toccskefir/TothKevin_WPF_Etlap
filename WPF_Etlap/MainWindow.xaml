@@ -7,6 +7,27 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="buttonAdd" Content="Új étel felvétele" Width="100" Margin="10" Click="buttonAdd_Click"/>
+                <Button x:Name="buttonDelete" Content="Törlés" Width="100" Margin="10" Click="buttonDelete_Click"/>
+            </StackPanel>
 
+            <Label Content="Áremelés"/>
+            <StackPanel Orientation="Horizontal">
+                <TextBox x:Name="textBoxPercentIncrease" Width="100" Margin="10"/>
+                <Label Content="%" Margin="0, 10"/>
+                <Button x:Name="buttonPercentIncrease" Content="Emelés" Width="100" Margin="10" Click="buttonPercentIncrease_Click"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBox x:Name="textBoxFtIncrease" Width="100" Margin="10"/>
+                <Label Content="Ft" Margin="0, 10"/>
+                <Button x:Name="buttonFtIncrease" Content="Emelés" Width="100" Margin="10" Click="buttonFtIncrease_Click"/>
+            </StackPanel>
+
+            <DataGrid x:Name="dataGridMenu"/>
+
+            <Label x:Name="labelDescription"/>
+        </StackPanel>
     </Grid>
 </Window>
