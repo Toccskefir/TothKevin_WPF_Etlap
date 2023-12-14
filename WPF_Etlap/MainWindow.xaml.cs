@@ -38,7 +38,27 @@ namespace WPF_Etlap
 
         private void buttonDelete_Click(object sender, RoutedEventArgs e)
         {
+            Food selectedFood = dataGridMenu.SelectedItem as Food;
+            if (selectedFood == null)
+            {
+                MessageBox.Show("Válasszon ki egy elemet a törléshez!");
+                return;
+            }
 
+            MessageBoxResult result = MessageBox.Show($"Törölni szeretné az alábbi ételt: {selectedFood.Name}?",
+                "Törlés", MessageBoxButton.YesNo);
+            if (result == MessageBoxResult.Yes)
+            {
+                if (this.service.Delete(selectedFood.Id))
+                {
+                    MessageBox.Show("Sikeres törlés!");
+                }
+                else
+                {
+                    MessageBox.Show("Sikertelen törlés!");
+                }
+                Read();
+            }
         }
 
         private void buttonPercentIncrease_Click(object sender, RoutedEventArgs e)
