@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF_Etlap", "WPF_Etlap\WPF_Etlap.csproj", "{63AB2CAF-9D4B-4CCB-AF83-2D68975A2895}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{63AB2CAF-9D4B-4CCB-AF83-2D68975A2895}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63AB2CAF-9D4B-4CCB-AF83-2D68975A2895}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63AB2CAF-9D4B-4CCB-AF83-2D68975A2895}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63AB2CAF-9D4B-4CCB-AF83-2D68975A2895}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9D9B418A-DCCD-4681-B59E-1CCFB72409D7}
+	EndGlobalSection
+EndGlobal
